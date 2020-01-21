@@ -1,4 +1,4 @@
-import React, {   FunctionComponent as FC } from "react";
+import React, { FunctionComponent as FC } from "react";
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
 import { Test } from "./Test";
