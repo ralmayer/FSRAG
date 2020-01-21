@@ -7,6 +7,7 @@ interface Pokemon {
   title: String;
   description: String;
   type: String;
+  image: String;
 }
 
 interface Pokemons {
@@ -32,10 +33,15 @@ export const Test: FC = () => {
   if (error) return <p>Error :(</p>;
 
   return (
-    <>
-      {data?.pokemons.map((pokemon: Pokemon) => (
-        <h1 key={pokemon.title.toString()}>{pokemon.title}</h1>
+    <div className="md:w-4/12 sm:w-screen text-center">
+      {data?.pokemons.map(({ id, title, description, type, image }) => (
+        <div key={title.toString()}>
+          <h1>{title}</h1>
+          <p>{description}</p>
+          <div className="h-32 w-32 w-full flex justify-center"><img src={image.toString()} className="object-cover w-32"/></div>
+          <br />
+        </div>
       ))}
-    </>
+    </div>
   );
 };
