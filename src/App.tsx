@@ -20,7 +20,3 @@ const App: FC = () => {
 };
 
 export default App;
-
-// client.query({
-//   query: GET_POKEMON
-// }).then(res => res.data.pokemons.map((pokemon: Pokemon) => console.log(pokemon)))
